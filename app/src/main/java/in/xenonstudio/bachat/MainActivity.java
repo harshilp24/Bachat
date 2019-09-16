@@ -102,12 +102,12 @@ public class MainActivity extends AppCompatActivity  implements OnChartValueSele
         LinearLayout layout = (LinearLayout) findViewById(R.id.datalayout);
         layout.setVisibility(View.VISIBLE);
         View view1 = (View) findViewById(R.id.view1);
-        view1.setVisibility(View.VISIBLE);
+        view1.setVisibility(View.GONE);
         View view2 = (View) findViewById(R.id.view2);
-        view2.setVisibility(View.VISIBLE);
+        view2.setVisibility(View.GONE);
 
         int position =  e.getXIndex();
-        Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
         dataSet.setDrawValues(false);
         pieChart.setDrawSliceText(true);
         //XValue
@@ -116,12 +116,12 @@ public class MainActivity extends AppCompatActivity  implements OnChartValueSele
         Toast.makeText(this, ""+selectedValue, Toast.LENGTH_SHORT).show();*/
 
         final String selectedYValuew = String.valueOf(e.getXIndex());
-        Toast.makeText(this, ""+selectedYValuew+dataSetIndex, Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, ""+selectedYValuew+dataSetIndex, Toast.LENGTH_SHORT).show();
 
         //YValue
         final String selectedYValue = String.valueOf(e.getVal());
 
-        Toast.makeText(this, ""+selectedYValue, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, ""+selectedYValue, Toast.LENGTH_SHORT).show();
 
 
         // To remove slice text
