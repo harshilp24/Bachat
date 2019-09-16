@@ -93,25 +93,22 @@ public class MainActivity extends AppCompatActivity  implements OnChartValueSele
         pieChart.setTouchEnabled(true);
         pieChart.animateXY(1400, 1400);
 
-        MyMarkerView mv = new MyMarkerView(this, R.layout.custom_marker);
-        pieChart.setMarkerView(mv);
+      /*  MyMarkerView mv = new MyMarkerView(this, R.layout.custom_marker);
+        pieChart.setMarkerView(mv);*/
 }
 
     @Override
     public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
         LinearLayout layout = (LinearLayout) findViewById(R.id.datalayout);
         layout.setVisibility(View.VISIBLE);
-
-
         View view1 = (View) findViewById(R.id.view1);
         view1.setVisibility(View.VISIBLE);
         View view2 = (View) findViewById(R.id.view2);
         view2.setVisibility(View.VISIBLE);
-       /* MyMarkerView mv = new MyMarkerView(this, R.layout.custom_marker);
-        view1.setMarker(mv);*/
+
         int position =  e.getXIndex();
         Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
-        dataSet.setDrawValues(true);
+        dataSet.setDrawValues(false);
         pieChart.setDrawSliceText(true);
         //XValue
       /*  final String selectedValue=pieChart.getX().get(position);
